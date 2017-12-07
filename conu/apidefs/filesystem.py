@@ -17,7 +17,6 @@
 import logging
 import os
 import shutil
-import xattr
 from tempfile import mkdtemp
 
 from conu.exceptions import ConuException
@@ -160,4 +159,3 @@ class Filesystem(object):
         """
         # what if SELinux is not enabled?
         p = self.p(file_path)
-        return xattr.get(p, "security.selinux")
